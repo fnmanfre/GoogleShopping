@@ -22,7 +22,9 @@ class Sel:
      
 
 class GoogleShoppingScraping:
-    '''Class for web scraping Google Shopping and returning a list of results containing a dictionary with product name, price, seller, rating, and store link.'''
+    '''Class for web scraping Google Shopping 
+     
+      :return: list containing a dictionary with product name, price, seller, rating, and store link.'''
 
     def __init__(self, headless: bool = True, implicitly_wait: float = 0.5) -> None:
         self.headless = headless
