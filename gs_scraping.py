@@ -24,7 +24,7 @@ class Sel:
 class GoogleShoppingScraping:
     '''Class for web scraping Google Shopping and returning a list of results containing a dictionary with product name, price, seller, rating, and store link.'''
 
-    def __init__(self, headless: bool = True, implicitly_wait: float = 0.1) -> None:
+    def __init__(self, headless: bool = True, implicitly_wait: float = 0.5) -> None:
         self.headless = headless
         self.chrome_options = webdriver.ChromeOptions()
         self.chrome_options.add_experimental_option('excludeSwitches', ['enable-logging'])
@@ -102,7 +102,7 @@ if __name__ == '__main__':
     # IMPLEMENTATION EXAMPLE
     search = input("What are you looking for?? \n>> ")
     print('Please wait a minute')
-    example = GoogleShoppingScraping(headless=True)
+    example = GoogleShoppingScraping(headless=True, implicitly_wait=0.1)
     search_results = example(search)
 
     for i, r in enumerate(search_results):
