@@ -81,7 +81,7 @@ class GoogleShoppingScraping:
                     'product' : product.strip(),
                     'price' : price.strip(),
                     'seller' : seller.strip(),
-                    'rate' : rate.strip(),
+                    'rating' : rate.strip(),
                     'link' : link,
                 }
 
